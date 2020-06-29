@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
    let timerId
    let score = 0
    const colors = [
-      'orange',
-      'red',
-      'purple',
-      'green',
-      'blue'
+      '#fc9105',
+      '#ef2e10',
+      '#b41eea',
+      '#2acc40',
+      '#44fcf0'
    ]
 
    // The Tetrominioes
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       undraw()
       currentRotation ++
       if(currentRotation === current.length) {
-         // Ifthe current rotation gets to 4, make it go back to 0
+         // If the current rotation gets to 4, make it go back to 0
          currentRotation = 0
       }
       current = theTetrominoes[random][currentRotation]
@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       upNextTetrominoes[nextRandom].forEach( index => {
          displaySquares[displayIndex + index].classList.add('tetromino')
          displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
+         
       })
    }
 
@@ -220,18 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
    // Game Over
    function gameOver() {
-      if(current.some(index =! squares[currentPosition + index].classList.contains('take'))) {
-         scoreDisplay.innerHTML = 'end'
+      if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+         scoreDisplay.innerHTML = 'Game Over!'
          clearInterval(timerId)
       }
    }
-
-
-
-
-
-
-
-
-
 });

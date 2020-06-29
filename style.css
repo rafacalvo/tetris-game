@@ -1,3 +1,6 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300;400;500;600;700&display=swap');
+
 *,
 *:before,
 *:after {
@@ -6,9 +9,15 @@
    padding: 0;
 }
 
+body {
+   background-color: #9fecfc;
+   font-family: 'MuseoModerno', cursive;
+}
+
 .container {
-   height: 80vh;
-   max-width: 1100px;
+   height: 100vh;
+   width: 90%;
+   max-width: 1240px;
    padding: 0 2em;
    margin: 0 auto;
    overflow: auto;
@@ -17,6 +26,7 @@
    justify-content: center;
    align-items: center;
    text-align: center;
+   background-color: #fff;
 }
 
 .score {
@@ -31,9 +41,10 @@ h3 {
    text-align: center;
    margin: 0.2em 0;
    padding: 1em 0;
-   font-size: 22px;
+   font-size: 20px;
+   color: #fff;
    width: 300px;
-   background-color: tomato;
+   background-color: #294599;
    border-radius: 8px;
 }
 
@@ -42,10 +53,11 @@ button {
    margin: 2em 0;
    padding: 1em 0;
    cursor: pointer;
-   background-color: violet;
-   border: 1px solid violet;
+   background-color: #44fcc2;
+   border: 1px solid #44fcc2;
    font-size: 14px;
    font-weight: bold;
+   border-radius: 10px;
 }
 
 .game-container {
@@ -58,7 +70,8 @@ button {
    height: 400px;
    display: flex;
    flex-wrap: wrap;
-   background-color: yellow;
+   background-color: #44dafc;
+   border-radius: 6px 6px 0 0;
 }
 
 .grid div {
@@ -67,7 +80,8 @@ button {
 }
 
 .tetromino {
-   background-color: blue;
+   background-color: #447efc;
+   border: 1px #383838 solid;
 }
 
 .small-grid {
@@ -79,7 +93,8 @@ button {
    height: 80px;
    display: flex;
    flex-wrap: wrap;
-   background-color: turquoise;
+   background-color: #447efc;
+   border-radius: 8px;
 }
 
 .mini-grid div {
